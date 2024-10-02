@@ -9,9 +9,11 @@ def input_guess(secret_word_len: int) -> str:
         f"Enter a {secret_word_len} character word: "
     )  # using f-string for conciseness!
     while len(guess) != secret_word_len:
-        guess: str = input(
+        guess = input(
             f"That wasn't {secret_word_len} chars! Try again: "
         )  # program won't move past this until user inputs a word of correct len
+        # originally redefined a variable guess here but realized I should just update
+        # the original definition!
     return guess
 
 
