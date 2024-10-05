@@ -1,10 +1,12 @@
-"""Write a docstring."""
+"""Writing different functions involving lists."""
 
 __author__ = "730760471"
 
 
 def all(list: list[int], num: int) -> bool:
     """Returns whether all elements of list are equal to num."""
+    if len(list) == 0:
+        return False  # forgot about this empty list case in first submission.
     i: int = 0
     while i < len(list):
         if list[i] != num:
