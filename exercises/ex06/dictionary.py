@@ -73,6 +73,7 @@ def update_attendance(
     """Updates existing attendance dictionary with new attendance info."""
 
     if weekday in attendance:
-        attendance[weekday].append(student)
+        if student not in attendance[weekday]:
+            attendance[weekday].append(student)
     else:
         attendance[weekday] = [student]
